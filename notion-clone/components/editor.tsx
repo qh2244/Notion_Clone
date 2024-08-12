@@ -44,16 +44,18 @@ const Editor = ({
     uploadFile: handleUpload
   });
 
+  // Attach onChange handler directly to the editor instance
+  editor.onChange(() => {
+    const content = JSON.stringify(editor.topLevelBlocks, null, 2);
+    onChange(content);
+  });
+
   return (
     <div>
       <BlockNoteView
         editor={editor}
         theme={resolvedTheme === "dark" ? "dark" : "light"}
-        editable={editable} // Move the editable prop here
-        onChange={(updatedEditor) => {
-          const content = JSON.stringify(updatedEditor.topLevelBlocks, null, 2);
-          onChange(content);
-        }}
+        editable={editable}
       />
     </div>
   )
