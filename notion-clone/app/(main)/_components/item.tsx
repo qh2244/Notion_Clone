@@ -15,6 +15,7 @@ import { useUser } from "@clerk/clerk-react";
 
 import { Id } from "@/convex/_generated/dataModel";
 import { cn } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
 import { api } from "@/convex/_generated/api";
 import {
   DropdownMenu,
@@ -135,7 +136,7 @@ export const Item = ({
       </span>
       {isSearch && (
         <kbd className="ml-auto pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-          <span className="text-xs">⌘</span>S
+          <span className="text-xs">⌘</span>K
         </kbd>
       )}
       {!!id && (
@@ -189,6 +190,8 @@ Item.Skeleton = function ItemSkeleton({ level }: { level?: number }) {
       }}
       className="flex gap-x-2 py-[3px]"
     >
+      <Skeleton className="h-4 w-4" />
+      <Skeleton className="h-4 w-[30%]" />
     </div>
   )
 }
