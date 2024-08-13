@@ -19,6 +19,13 @@ export const Heading = () => {
                 Jotion is the connected workspace where <br />
                 better, faster work happens.
             </h3>
+            <h1>Login Auth:</h1>
+            <p>
+                Account: admin@test.com 
+            </p>
+            <p>
+                Password: b!CXQCWytVUGEC8
+            </p>
             {isLoading && (
               <div className="w-full flex items-center justify-center">
                 <Spinner size="lg" />
