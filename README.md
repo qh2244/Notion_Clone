@@ -1,4 +1,4 @@
-# Fullstack Notion Clone: Next.js 14, React, Convex, Tailwind | Full Course 2024
+# Fullstack Notion Clone: Next.js 14, React, Convex, Tailwind
 
 
 This is a repository for Fullstack Notion Clone: Next.js 14, React, Convex, Tailwind
